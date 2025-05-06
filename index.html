@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevDish</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="src/css/global.css">
+    <link rel="stylesheet" href="src/css/reset.css">
+
+    <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/footer.css">
+    <link rel="stylesheet" href="src/css/butons.css">
+    <link rel="stylesheet" href="src/css/form.css">
+    <link rel="stylesheet" href="src/css/menuMobile.css">
+
+
+</head>
+<body>
+
+    <header>
+        <nav>
+            <img src="src/img/Logo.svg" alt="DevDish Logo" class='NavBar_Logo'/>
+            <i class="bi bi-moon-stars NavBar_Theme" id="toggleTheme"></i>   
+        </nav>
+    </header>
+
+    <main>
+        <div class="Main_Bg Bg_Pink"></div>
+
+        <div class="Main_Principal">
+            <div class="Main_Container">
+            <section class="Main_Content_Box"> 
+                <h1>
+                    Crie Receitas Com os Seus Ingredientes
+                </h1>
+                <p>
+                    Basta tirar uma foto dos seus ingredientes ou digitá-los e sugeriremos receitas deliciosas que você pode fazer!
+                </p>
+                <div class="Main_Butons_Box">
+                    <button class="Buton_Pink">Tire uma Foto</button>
+                    <button class="Buton_White">Digite os Ingredientes</button>
+                </div>
+            </section>
+            </div>
+
+            <section class="Main_Image_Box">
+                <div class="Main_Image">
+                    <img src="https://raw.githubusercontent.com/luane-loureiro-dev/DevDish-FrontEnd/master/src/img/image_photo.png" alt="Imagem ingredientes" />
+                </div>
+            </section>
+        </div>
+
+        <section class="Main_secundary">
+
+            <div class="Detail_Container">
+                <h1>Como funciona?</h1>
+                <div class="Detail_Card_Box">
+                    <div class="Detail_Card">
+                        <div class="cricle_icon">
+                            <i class="bi bi-camera-fill"></i>
+                        </div>
+                        <h2>
+                            Tire uma foto dos ingredientes usando seu smartphone
+                        </h2>
+                    </div>
+                    <div class="Detail_Card">
+                        <div class="cricle_icon">
+                            <i class="bi bi-magic"></i>
+                        </div>
+                        <h2>
+                            Nossa IA identifica seus ingredientes automaticamente
+                        </h2>
+                    </div>
+                    <div class="Detail_Card">
+                        <div class="cricle_icon">
+                            <i class="bi bi-journal-text"></i>
+                        </div>
+                        <h2>
+                            Receba sugestões de receitas personalizadas com base nos seus ingredientes
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="Main_Info">
+            <div class="Info_Card_Box">
+                <div class="Info_Card">
+                    <div class="Info_Card_Icon_Title">
+                        <img src="https://raw.githubusercontent.com/luane-loureiro-dev/DevDish-FrontEnd/master//src/img/talheres.svg" alt="pictograma talheres" />
+                        <h3>
+                            Crie Suas Receitas
+                        </h3>
+                    </div>
+                    <p>
+                        Transforme seus ingredientes em refeições deliciosas com sugestões de receitas com tecnologia de IA.
+                    </p>
+                </div>
+                <div class="Info_Card Folow_Us_card">
+                    <h3>
+                        Folow us
+                    </h3>
+                    <div class="Info_Social_Media_Box"> 
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-instagram"></i>
+                        </a>        
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-github"></i>            
+                        </a>
+                    </div>
+                </div>
+
+                <div class="Info_Card Info_Card_News">
+                    <h3>
+                        News Letter
+                    </h3>
+                    <form class="Form_News">
+                        <input class="Form_News_Imput" type="email" placeholder="Digite seu email" required>
+                        <button class="Form_News_Button">
+                            <i class="bi bi-send"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="Footer_Container">
+            <p>© 2025 DevDish. Todos os direitos reservados. Desenvouvido por Devland.</p>
+            <div class="Info_Social_Media_Box" id="Footer_Social_Media_Box"> 
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-instagram"></i>
+                </a>        
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-github"></i>            
+                </a>
+            </div>
+        </div>
+    </footer> 
+
+    <nav class="menu--mobile">
+        <ul class="menu menu--mobile">
+            <li class="menu__item">
+                <a class="menu__link active" href="#home">
+                    <i class="menu__icon bi bi-house-door"></i>
+                    <span class="menu__text">Home</span>
+                </a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="#Pesquisar">
+                    <i class="menu__icon bi bi-magic"></i>
+                    <span class="menu__text">Criar Receita</span>
+                </a>
+            </li>
+    
+            
+            <li class="menu__item">
+                <a class="menu__link" href="#NewsLetter">
+                    <i class="menu__icon bi bi-envelope"></i>
+                    <span class="menu__text">News</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <script src="src/scripts/ToggleTheme"></script>
+
+</body>
+</html>
