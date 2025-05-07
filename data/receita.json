@@ -1,0 +1,23 @@
+{
+    "titulo": "Macarrão à Carbonara Inteligente",
+    "ingredientes": [
+      "200g de espaguete",
+      "100g de bacon em cubos",
+      "2 ovos",
+      "50g de queijo parmesão ralado",
+      "1 colher de sopa de azeite de oliva",
+      "Sal a gosto",
+      "Pimenta-do-reino a gosto"
+    ],
+    "instrucoes": [
+      "Cozinhe o espaguete em água salgada até ficar al dente. Reserve 1/2 xícara da água do cozimento.",
+      "Enquanto isso, em uma frigideira, aqueça o azeite e frite o bacon até dourar.",
+      "Em uma tigela, misture os ovos com o queijo parmesão, sal e pimenta.",
+      "Escorra o macarrão, adicione à frigideira com o bacon e misture bem.",
+      "Desligue o fogo, adicione a mistura de ovos e queijo e mexa rapidamente, até formar um molho cremoso.",
+      "Se necessário, adicione um pouco da água do cozimento reservada para ajustar a consistência.",
+      "Sirva imediatamente com mais queijo ralado por cima."
+    ],
+    "tempo_preparo": "25 minutos"
+  }
+  

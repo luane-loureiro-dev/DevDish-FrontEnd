@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="src/css/header.css">
     <link rel="stylesheet" href="src/css/main.css">
     <link rel="stylesheet" href="src/css/footer.css">
-    <link rel="stylesheet" href="src/css/butons.css">
+    <link rel="stylesheet" href="src/css/Buttons.css">
     <link rel="stylesheet" href="src/css/form.css">
     <link rel="stylesheet" href="src/css/menuMobile.css">
 
@@ -25,7 +25,7 @@
 </head>
 <body>
 
-    <header>
+    <header id="home">
         <nav>
             <img src="src/img/Logo.svg" alt="DevDish Logo" class='NavBar_Logo'/>
             <i class="bi bi-moon-stars NavBar_Theme" id="toggleTheme"></i>   
@@ -44,9 +44,23 @@
                 <p>
                     Basta tirar uma foto dos seus ingredientes ou digitá-los e sugeriremos receitas deliciosas que você pode fazer!
                 </p>
-                <div class="Main_Butons_Box">
-                    <button class="Buton_Pink">Tire uma Foto</button>
-                    <button class="Buton_White">Digite os Ingredientes</button>
+                <div class="Main_Buttons_Box" id="Pesquisar">
+
+                    <input type="file" id="Upload_Foto" accept="image/*" hidden>
+                    <label id="uploadBtn" for="Upload_Foto" class="Button_Pink">Enviar uma Foto</label>
+                    
+                    <div class="Button_Box_Ingredients">
+                        <button class="Button_White">Digite os Ingredientes</button>
+
+                        <form class="form_Busca_Ingredients" id="Busca_Ingredients" style="display: none;">
+                            <input class="Busca_Ingredients_input" type="text" id="Upload_Text" accept="text/*" placeholder="Ingredientes separados por vírgula">
+                            <button class="Form_Upload_Btn" id="uploadBtn">
+                                <i class="bi bi-magic"></i>
+                            </button>   
+                        </form>
+                    </div>
+
+
                 </div>
             </section>
             </div>
@@ -177,7 +191,10 @@
         </ul>
     </nav>
 
-    <script src="src/scripts/ToggleTheme"></script>
+    <script src="src/scripts/ToggleTheme.js"></script>
+    <script src="src/scripts/enviar_foto.js"></script>
+    <script src="src/scripts/Api_Post_Img.js"></script>
+    <script src="src/scripts/Api_Post_Text.js"></script>
 
 </body>
 </html>
