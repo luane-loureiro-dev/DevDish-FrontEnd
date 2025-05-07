@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
       formData.append('imagem', file); // Certifique-se de que 'imagem' é o nome esperado pela API
   
       try {
-        const responseImg = await fetch('http://localhost:5120/gerar-receita-por-imagem', {
+        const responseImg = await fetch('http://localhost:5120/api/receita/gerar/imagem', {
           method: 'POST',
           body: formData
         });
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
           throw new Error('A resposta da IA não contém uma lista válida de ingredientes.');
         }
   
-        const responseReceita = await fetch('https://localhost:7273/gerar-receita-por-texto', {
+        const responseReceita = await fetch('http://localhost:5120/api/receita/gerar/texto', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

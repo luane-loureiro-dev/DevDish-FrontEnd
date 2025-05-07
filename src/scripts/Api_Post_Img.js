@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
       try {
         // Envia a imagem para a API
-        const responseImg = await fetch('http://localhost:5120/gerar-receita-por-imagem', {
+        const responseImg = await fetch('http://localhost:5120/api/receita/gerar/imagem', {
           method: 'POST',
           body: formData
         });
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
   
         // Envia os ingredientes para gerar a receita
-        const responseReceita = await fetch('http://localhost:5120/gerar-receita-por-texto', {
+        const responseReceita = await fetch('http://localhost:5120/api/receita/gerar/texto', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
