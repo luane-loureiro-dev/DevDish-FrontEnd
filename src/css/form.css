@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
 }
-.Form_News_Imput {
+.Form_News_Imput, .form_Busca_Ingredients {
     all: unset; 
 }
 
@@ -30,4 +30,29 @@
     font-size: 1rem;
     font-weight: 500;
     padding: 1rem;
+}
+
+.form_Busca_Ingredients {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.form_Busca_Ingredients input{
+    margin-top: 1rem;
+    width: 70%;
+    height: 1.5rem;
+    background-color: var(--secundary-bg-color);
+    border: none;
+    color: var(--primary-text-color);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem;
+}
+.form_Busca_Ingredients button{
+    background-color: var(--button-pink-bg-color);
+    width: 20%;
+    height: 2.5rem;
+    border-radius: 0;
 }

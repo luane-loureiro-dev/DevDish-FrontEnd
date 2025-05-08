@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="src/css/Buttons.css">
     <link rel="stylesheet" href="src/css/form.css">
     <link rel="stylesheet" href="src/css/menuMobile.css">
+    <link rel="stylesheet" href="src/css/ExibirReceita.css">
 
 
 </head>
@@ -33,78 +34,38 @@
     </header>
 
     <main>
-        <div class="Main_Bg Bg_Pink"></div>
+        <div class="Main_Receita_Bg Bg_Pink"></div>
 
         <div class="Main_Principal">
-            <div class="Main_Container">
-            <section class="Main_Content_Box"> 
-                <h1>
-                    Crie Receitas Com os Seus Ingredientes
-                </h1>
-                <p>
-                    Basta tirar uma foto dos seus ingredientes ou digitá-los e sugeriremos receitas deliciosas que você pode fazer!
+            <section class="receita-container">
+                <h1 id="titulo-receita">Título da Receita</h1>
+                <h2>
+                    <i class="bi bi-clipboard"></i>
+                    Ingredientes<hr>
+                </h2>
+                <ul id="lista-ingredientes">
+                    <!-- Ingredientes serão inseridos aqui -->
+                </ul>
+                <h2>
+                    <i class="bi bi-bookmark"></i>
+                    Instruções<hr>
+                </h2>
+                <p id="instrucoes-receita">
+                    <!-- Instruções serão inseridas aqui -->
                 </p>
-                <div class="Main_Buttons_Box" id="Pesquisar">
+                <h2>
+                    <i class="bi bi-clock"></i>
+                    Tempo de Preparo<hr>
+                </h2>
+                <p id="tempo-preparo">
+                    <!-- Tempo de preparo será inserido aqui -->
+                </p>
 
-                    <input type="file" id="Upload_Foto" accept="image/*" hidden>
-                    <label id="uploadBtn" for="Upload_Foto" class="Button_Pink">Enviar uma Foto</label>
-                    
-                    <div class="Button_Box_Ingredients">
-                        <button class="Button_White">Digite os Ingredientes</button>
-
-                        <form class="form_Busca_Ingredients" id="Busca_Ingredients" style="display: none;">
-                            <input class="Busca_Ingredients_input" type="text" id="Upload_Text" accept="text/*" placeholder="Ingredientes separados por vírgula">
-                            <button class="Form_Upload_Btn" id="uploadBtn">
-                                <i class="bi bi-magic"></i>
-                            </button>   
-                        </form>
-                    </div>
-
-
-                </div>
-            </section>
-            </div>
-
-            <section class="Main_Image_Box">
-                <div class="Main_Image">
-                    <img src="/src/img/image_photo.png" alt="Imagem ingredientes" />
-                </div>
             </section>
         </div>
 
-        <section class="Main_secundary">
-
-            <div class="Detail_Container">
-                <h1>Como funciona?</h1>
-                <div class="Detail_Card_Box">
-                    <div class="Detail_Card">
-                        <div class="cricle_icon">
-                            <i class="bi bi-camera-fill"></i>
-                        </div>
-                        <h2>
-                            Tire uma foto dos ingredientes usando seu smartphone
-                        </h2>
-                    </div>
-                    <div class="Detail_Card">
-                        <div class="cricle_icon">
-                            <i class="bi bi-magic"></i>
-                        </div>
-                        <h2>
-                            Nossa IA identifica seus ingredientes automaticamente
-                        </h2>
-                    </div>
-                    <div class="Detail_Card">
-                        <div class="cricle_icon">
-                            <i class="bi bi-journal-text"></i>
-                        </div>
-                        <h2>
-                            Receba sugestões de receitas personalizadas com base nos seus ingredientes
-                        </h2>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        <div class="Main_secundary_Recipe"></div>
+        
         <section class="Main_Info">
             <div class="Info_Card_Box">
                 <div class="Info_Card">
@@ -149,21 +110,22 @@
             </div>
         </section>
     </main>
-    <footer class="Footer_Container">
-        <p>© 2025 DevDish. Todos os direitos reservados. Desenvouvido por Devland.</p>
-        <div class="Info_Social_Media_Box" id="Footer_Social_Media_Box"> 
-            <a href="#" target="_blank" rel="noopener noreferrer">
-                <i class="bi bi-instagram"></i>
-            </a>        
-            <a href="#" target="_blank" rel="noopener noreferrer">
-                <i class="bi bi-linkedin"></i>
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-                <i class="bi bi-github"></i>            
-            </a>
+    <footer>
+        <div class="Footer_Container">
+            <p>© 2025 DevDish. Todos os direitos reservados. Desenvouvido por Devland.</p>
+            <div class="Info_Social_Media_Box" id="Footer_Social_Media_Box"> 
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-instagram"></i>
+                </a>        
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-github"></i>            
+                </a>
+            </div>
         </div>
     </footer> 
-
 
     <nav class="menu--mobile">
         <ul class="menu menu--mobile">
@@ -194,6 +156,36 @@
     <script src="src/scripts/enviar_foto.js"></script>
     <script src="src/scripts/Api_Post_Img.js"></script>
     <script src="src/scripts/Api_Post_Text.js"></script>
+
+
+    <script>
+        // Exemplo de dados da receita (substitua pelos dados reais da sua API)
+        const receita = {
+          titulo: "Bolo de Chocolate",
+          ingredientes: [
+            "2 xícaras de farinha de trigo",
+            "1 xícara de açúcar",
+            "1 xícara de cacau em pó",
+            "2 ovos",
+            "1 xícara de leite",
+            "1/2 xícara de óleo",
+            "1 colher de sopa de fermento em pó"
+          ],
+          instrucoes: "Em uma tigela, misture os ingredientes secos. Adicione os ovos, o leite e o óleo, e mexa até obter uma massa homogênea. Por fim, adicione o fermento e misture delicadamente. Despeje a massa em uma forma untada e leve ao forno preaquecido a 180°C por 40 minutos.",
+          tempoPreparo: "50 minutos"
+        };
+    
+        // Inserindo os dados na página
+        document.getElementById("titulo-receita").textContent = receita.titulo;
+        const listaIngredientes = document.getElementById("lista-ingredientes");
+        receita.ingredientes.forEach(ingrediente => {
+          const li = document.createElement("li");
+          li.textContent = ingrediente;
+          listaIngredientes.appendChild(li);
+        });
+        document.getElementById("instrucoes-receita").textContent = receita.instrucoes;
+        document.getElementById("tempo-preparo").textContent = receita.tempoPreparo;
+      </script>
 
 </body>
 </html>
