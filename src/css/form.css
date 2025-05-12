@@ -1,23 +1,44 @@
-.Form_News{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.Form_News_Imput, .form_Busca_Ingredients {
+/* input[type="file"] {
+  display: none;
+} */
+
+.Form_News_Imput, .Form_Busca_Photo, .Form_Busca_Text {
     all: unset; 
 }
 
-.Form_News_Imput{
+.Form_News, .Form_Busca_Photo, .Form_Busca_Text{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.Form_News_Imput, .Form_Send_input{
     width: 13rem;
     height: 2.25rem;
     background-color: #374151;
     border: none;
 }
 
-.Form_News_Button{
+.Form_Send_input{
+    background-color: var(--imput-bg-color);
+    width: 100%;
+    height: 2.4rem;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+  cursor: pointer;
+  color: var(--secundary-text-color);
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+
+.Form_News_Button, .Form_Send_Btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 3rem;
-    height: 2.25rem;
+    height: 2.4rem;
     background-color: var(--primary-color);
     color: var(--primary-text-color);
     font-size: 1.25rem;
@@ -26,33 +47,39 @@
     transition: all 0.6s ease-in-out;
 }
 
-.Form_News_Imput::placeholder {
+.Form_Send_Btn{
+    flex-direction: row;
+    background-color: var(--button-pink-bg-color);
+
+}
+
+.Form_News_Imput::placeholder, .Form_Send_input::placeholder{
     font-size: 1rem;
     font-weight: 500;
     padding: 1rem;
 }
 
-.form_Busca_Ingredients {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.Form_Busca_Photo, .Form_Busca_Text{
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-right: 2.5rem;
+    padding: 1rem 0;
+    transition: all 0.6s ease-in-out;
 }
 
-.form_Busca_Ingredients input{
-    margin-top: 1rem;
-    width: 70%;
-    height: 1.5rem;
-    background-color: var(--secundary-bg-color);
-    border: none;
-    color: var(--primary-text-color);
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 0.5rem;
-}
-.form_Busca_Ingredients button{
-    background-color: var(--button-pink-bg-color);
-    width: 20%;
-    height: 2.5rem;
-    border-radius: 0;
+.toggle-form {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+  }
+  
+  .toggle-form.active {
+    max-height: 200px; 
+    opacity: 1;
+  }
+
+input[type="file"] {
+  display: none;
 }

@@ -3,6 +3,7 @@
 
   --primary-bg-color: #F5F5F5;
   --secundary-bg-color: #F9FAFB;
+  --imput-bg-color: #d0d9d9;
   --card-bg-color: #fff;
   --base-bg-color: #1F2937;
 
@@ -14,6 +15,8 @@
   --button-text-color: #D0005A;
   --button-hover-bg-color: #FF539E;
 
+  --recipe-bg-color: #F5F5F5;
+  --recipe-text-color: #1F2937;
   --icon-color:#FF539E;
   --icon-link-color: #fff;
 }
@@ -34,24 +37,22 @@
   --button-white-bg-color: #fff;
   --button-text-color: #D0005A;
   --button-hover-bg-color: #FF539E;
-
+  
+  --recipe-bg-color: #F5F5F5;
+  --recipe-text-color: #1F2937;
   --icon-color:#FF539E;
   --icon-link-color: #fff;
 }
 
-
-
 body {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  max-height: 100vh;
+  align-items: baseline;
   max-width: 100vw;
   color: var(--text-color);
   background-color: var(--primary-bg-color);
   font-family: "Montserrat-Regular", sans-serif;
   padding: 0;
   margin: 0;
-  
-  border: 2px solid purple
+  overflow-x: hidden;
 }

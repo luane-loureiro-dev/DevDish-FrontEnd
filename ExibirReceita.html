@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevDish</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="src/css/global.css">
+    <link rel="stylesheet" href="src/css/reset.css">
+
+    <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/footer.css">
+    <link rel="stylesheet" href="src/css/Buttons.css">
+    <link rel="stylesheet" href="src/css/form.css">
+    <link rel="stylesheet" href="src/css/menuMobile.css">
+    <link rel="stylesheet" href="src/css/ExibirReceita.css">
+
+
+</head>
+<body>
+
+    <header id="home">
+        <nav>
+            <img src="src/img/Logo.svg" alt="DevDish Logo" class='NavBar_Logo'/>
+            <i class="bi bi-moon-stars NavBar_Theme" id="toggleTheme"></i>   
+        </nav>
+    </header>
+
+    <main>
+        <div class="Main_Receita_Bg Bg_Pink"></div>
+        <div class="Main_Principal">
+    
+            <section class="receita-container">
+                    <h1 id="titulo-receita">Título da Receita</h1>
+                    <div class="Ingredientes">
+                        <div class="Box_Ingredient_Image">
+                        <h2>
+                        <i class="bi bi-clipboard"></i>
+                        Ingredientes
+                        <hr>
+                        </h2>
+                        <ul id="lista-ingredientes">
+                            <!-- Ingredientes serão inseridos aqui -->
+                        </ul>
+                    </div>
+                    <img src="/src/img/img_Receita.svg" alt="Ilustração de um livro de receitas e ingredientes" class="Receita_Image"/>
+                </div>
+
+                <h2>
+                    <i class="bi bi-bookmark"></i>
+                    Instruções<hr>
+                </h2>
+                <p id="instrucoes-receita">
+                    <!-- Instruções serão inseridas aqui -->
+                </p>
+                <h2>
+                    <i class="bi bi-clock"></i>
+                    Tempo de Preparo<hr>
+                </h2>
+                <p id="tempo-preparo">
+                    <!-- Tempo de preparo será inserido aqui -->
+                </p>
+                <div class="Next_Recipe_Box">
+                    <button class="Next_Recipe_Arrow left">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+                    <button class="Next_Recipe_Arrow right">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                </div>
+            </section>
+
+        </div>
+
+        <div class="Main_secundary_Recipe"></div>
+        
+        <section class="Main_Info">
+            <div class="Info_Card_Box">
+                <div class="Info_Card">
+                    <div class="Info_Card_Icon_Title">
+                        <img src="/src/img/talheres.svg" alt="pictograma talheres" />
+                        <h3>
+                            Crie Suas Receitas
+                        </h3>
+                    </div>
+                    <p>
+                        Transforme seus ingredientes em refeições deliciosas com sugestões de receitas com tecnologia de IA.
+                    </p>
+                </div>
+                <div class="Info_Card Folow_Us_card">
+                    <h3>
+                        Folow us
+                    </h3>
+                    <div class="Info_Social_Media_Box"> 
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-instagram"></i>
+                        </a>        
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-github"></i>            
+                        </a>
+                    </div>
+                </div>
+
+                <div class="Info_Card Info_Card_News">
+                    <h3>
+                        News Letter
+                    </h3>
+                    <form class="Form_News">
+                        <input class="Form_News_Imput" type="email" placeholder="Digite seu email" required>
+                        <button class="Form_News_Button">
+                            <i class="bi bi-send"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="Footer_Container">
+            <p>© 2025 DevDish. Todos os direitos reservados. Desenvouvido por Devland.</p>
+            <div class="Info_Social_Media_Box" id="Footer_Social_Media_Box"> 
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-instagram"></i>
+                </a>        
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-github"></i>            
+                </a>
+            </div>
+        </div>
+    </footer> 
+
+    <nav class="menu--mobile">
+        <ul class="menu menu--mobile">
+            <li class="menu__item">
+                <a class="menu__link active" href="#home">
+                    <i class="menu__icon bi bi-house-door"></i>
+                    <span class="menu__text">Home</span>
+                </a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="#Pesquisar">
+                    <i class="menu__icon bi bi-magic"></i>
+                    <span class="menu__text">Criar Receita</span>
+                </a>
+            </li>
+    
+            
+            <li class="menu__item">
+                <a class="menu__link" href="#NewsLetter">
+                    <i class="menu__icon bi bi-envelope"></i>
+                    <span class="menu__text">News</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <script src="src/scripts/ToggleTheme.js"></script>
+    <script src="src/scripts/Api_Post_Img.js"></script>
+    <script src="src/scripts/Api_Post_Text.js"></script>
+    <script src="src/scripts/Exibir_Receita.js"></script>
+    <script src="src/scripts/Tamanho_MainSecundary.js"></script>
+</body>
+</html>

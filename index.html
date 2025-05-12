@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="src/css/Buttons.css">
     <link rel="stylesheet" href="src/css/form.css">
     <link rel="stylesheet" href="src/css/menuMobile.css">
+    <link rel="stylesheet" href="src/css/carrocel.css">
 
 
 </head>
@@ -41,22 +42,50 @@
                 <h1>
                     Crie Receitas Com os Seus Ingredientes
                 </h1>
-                <p>
-                    Basta tirar uma foto dos seus ingredientes ou digitá-los e sugeriremos receitas deliciosas que você pode fazer!
-                </p>
+                <div class="carousel-container">
+                    <div class="carousel-texts">
+                        <p class="active">O DevDish é um aplicativo que utiliza inteligência artificial para sugerir receitas com base nos ingredientes que você possui em casa.</p>
+                        <p>Com o DevDish, você pode aproveitar ao máximo os ingredientes que já tem, evitando desperdícios e economizando tempo e dinheiro.</p>
+                        <p>Nossa plataforma é fácil de usar e oferece uma ampla variedade de receitas, desde pratos simples até opções mais elaboradas.</p>
+                        <p>Basta tirar uma foto dos seus ingredientes ou digitá-los e sugeriremos receitas deliciosas que você pode fazer!</p>
+                    </div>
+
+                    <!-- Botões com ícones -->
+                    <div class="carousel-buttons">
+                        <button class="carousel-arrow left">
+                            <i class="bi bi-chevron-left"></i>
+                        </button>
+                        <button class="carousel-arrow right">
+                            <i class="bi bi-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
                 <div class="Main_Buttons_Box" id="Pesquisar">
-
-                    <input type="file" id="Upload_Foto" accept="image/*" hidden>
-                    <label id="uploadBtn" for="Upload_Foto" class="Button_Pink">Enviar uma Foto</label>
-                    
+                    <div class="Button_Box_Photo">
+                        <button class="Button_Pink" id="Btn_Toggle_Photo">Enviar uma Foto</button>                      
+                        <form id="Form_Photo" class="toggle-form">
+                        <div class="Form_Busca_Photo">
+                            <input id="Upload_Photo" type="file" placeholder="Tire uma foto dos ingredientes" display=none>
+                                <label for="Upload_Photo" class="Form_Send_input">
+                                Enviar Imagem
+                            </label>
+                            <button class="Form_Send_Btn" id="Send_Photo" type="submit">
+                                <i class="bi bi-send"></i>
+                            </button>
+                        </div>
+                        </form>
+                    </div>
+                      
                     <div class="Button_Box_Ingredients">
-                        <button class="Button_White">Digite os Ingredientes</button>
-
-                        <form class="form_Busca_Ingredients" id="Busca_Ingredients" style="display: none;">
-                            <input class="Busca_Ingredients_input" type="text" id="Upload_Text" accept="text/*" placeholder="Ingredientes separados por vírgula">
-                            <button class="Form_Upload_Btn" id="uploadBtn">
-                                <i class="bi bi-magic"></i>
-                            </button>   
+                        <button class="Button_White" id="Btn_Toggle_Text">Digite os Ingredientes</button>                     
+                        <form id="Form_Text" class="toggle-form">
+                            <div class="Form_Busca_Photo">
+                                <input class="Form_Send_input" id="Upload_text" type="text" placeholder="Digite os ingredientes aqui" />
+                                <button class="Form_Send_Btn" type="submit" id="Send_Text">
+                                    <i class="bi bi-send"></i>
+                                </button>
+                            </div>
                         </form>
                     </div>
 
@@ -149,22 +178,21 @@
             </div>
         </section>
     </main>
-    <footer>
-        <div class="Footer_Container">
-            <p>© 2025 DevDish. Todos os direitos reservados. Desenvouvido por Devland.</p>
-            <div class="Info_Social_Media_Box" id="Footer_Social_Media_Box"> 
-                <a href="#" target="_blank" rel="noopener noreferrer">
-                    <i class="bi bi-instagram"></i>
-                </a>        
-                <a href="#" target="_blank" rel="noopener noreferrer">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-                <a href="#" target="_blank" rel="noopener noreferrer">
-                    <i class="bi bi-github"></i>            
-                </a>
-            </div>
+    <footer class="Footer_Container">
+        <p>© 2025 DevDish. Todos os direitos reservados. Desenvouvido por Devland.</p>
+        <div class="Info_Social_Media_Box" id="Footer_Social_Media_Box"> 
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-instagram"></i>
+            </a>        
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-github"></i>            
+            </a>
         </div>
     </footer> 
+
 
     <nav class="menu--mobile">
         <ul class="menu menu--mobile">
@@ -192,9 +220,10 @@
     </nav>
 
     <script src="src/scripts/ToggleTheme.js"></script>
-    <script src="src/scripts/enviar_foto.js"></script>
-    <script src="src/scripts/Api_Post_Img.js"></script>
-    <script src="src/scripts/Api_Post_Text.js"></script>
+    <script src="src/scripts/Exibir_Imput.js" defer></script>
+    <script src="src/scripts/Api_Post_Img.js" defer></script>
+    <script src="src/scripts/Api_Post_Text.js" defer></script>
+    <script src="src/scripts/carrocel.js" defer></script>
 
 </body>
 </html>

@@ -1,5 +1,5 @@
-button,  .Button_Pink{
-    width: 48%;
+button {
+    width: 70vw;
     height: 3.5rem;
     color: var(--button-text-color);
     text-align: center;
@@ -10,14 +10,14 @@ button,  .Button_Pink{
     cursor: pointer;
     transition: all 0.6s ease-in-out;
     border: none;
+    padding: 1rem;
     gap: 1rem;
+
 }
 
 .Button_Pink{
-    text-align: center;
+    width: 100%;
     background-color: var(--button-pink-bg-color);
-    display: inline-block;
-    line-height: 3.5rem; 
 }
 
 .Button_White{
