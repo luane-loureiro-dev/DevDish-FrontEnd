@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('Form_Photo');
   const uploadInput = document.getElementById('Upload_Photo');
   const sendBtn = document.getElementById('Send_Photo');
+  const loadingEl = document.getElementById('loading'); // pega o elemento do loading
 
   if (!form || !uploadInput || !sendBtn) {
     console.warn('Elemento Form_Photo, Upload_Photo ou Send_Photo não encontrado.');
@@ -16,6 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
       alert('Por favor, selecione uma imagem antes de enviar.');
       return;
     }
+
+    // Mostra o loading
+    if (loadingEl) loadingEl.style.display = 'flex';
 
     const formData = new FormData();
     formData.append('image', file); 
@@ -43,6 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch (error) {
       console.error('Erro ao enviar imagem:', error);
       alert('Erro ao gerar receitas. Veja o console.');
+    } finally {
+      // Esconde o loading (apenas se você continuar na página atual, mas em redirect não faz efeito)
+      if (loadingEl) loadingEl.style.display = 'none';
     }
   });
 });

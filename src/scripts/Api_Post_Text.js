@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('Form_Text');
   const uploadInput = document.getElementById('Upload_Text'); 
   const sendBtn = document.getElementById('Send_Text');
+  const loadingEl = document.getElementById('loading'); // elemento de loading
 
   if (!form || !uploadInput || !sendBtn) {
     console.warn('Elemento Form_Text, Upload_text ou Send_Text não encontrado.');
@@ -15,13 +16,16 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
+    // Mostrar loading
+    if (loadingEl) loadingEl.style.display = 'flex';
+
     try {
       const response = await fetch('https://localhost:5121/api/receitas/gerar/texto?pagina=1&tamanhoPagina=10', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ ingredientes: ingredientesTexto }) // Conforme esperado pela API
+        body: JSON.stringify({ ingredientes: ingredientesTexto })
       });
 
       const contentType = response.headers.get('content-type');
@@ -41,6 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch (error) {
       console.error('Erro ao gerar receitas por texto:', error);
       alert('Erro ao gerar receitas. Veja o console.');
+    } finally {
+      // Ocultar loading (só funciona se não redirecionar)
+      if (loadingEl) loadingEl.style.display = 'none';
     }
   });
 });
