@@ -42,7 +42,7 @@
                     <div class="Ingredientes">
                         <div class="Box_Ingredient_Image">
                         <h2>
-                        <i class="bi bi-basket"></i>
+                        <i class="bi bi-basket icone"></i>
                         Ingredientes
                         <hr>
                         </h2>
@@ -50,25 +50,25 @@
                             <!-- Ingredientes serão inseridos aqui -->
                         </ul>
                     </div>
-                    <img src="/src/img/img_Receita.svg" alt="Ilustração de um livro de receitas e ingredientes" class="Receita_Image"/>
+                    <img src="/src/img/img_Receita.svg" alt="Ilustração de um livro de receitas e ingredientes" class="Receita_Image" id="imagem-receita"/>
                 </div>
 
                 <h2>
-                    <i class="bi bi-journal-text"></i>
+                    <i class="bi bi-journal-text icone"></i>
                     Instruções<hr>
                 </h2>
                 <p id="instrucoes-receita">
                     <!-- Instruções serão inseridas aqui -->
                 </p>
                 <h2>
-                    <i class="bi bi-clock"></i>
+                    <i class="bi bi-clock icone"></i>
                     Tempo de Preparo<hr>
                 </h2>
                 <p id="tempo-preparo">
                     <!-- Tempo de preparo será inserido aqui -->
                 </p>
                 <h2>
-                    <i class="bi bi-patch-question"></i>
+                    <i class="bi bi-patch-question icone"></i>
                     Número de Porções<hr>
                 </h2>
                 <p id="numero-porcoes">
@@ -76,12 +76,15 @@
                 </p>
 
                 <div class="Next_Recipe_Box">
-                    <button class="Next_Recipe_Arrow left">
-                        <i class="bi bi-chevron-left"></i>
-                    </button>
-                    <button class="Next_Recipe_Arrow right">
-                        <i class="bi bi-chevron-right"></i>
-                    </button>
+                    <span class="Next_Recipe_Arrow left">
+                        <i class="bi bi-arrow-left-circle-fill"></i>
+                    </span>
+
+                    <span id="contador-receitas" class="contador-paginacao">1 / 1</span>
+
+                    <span class="Next_Recipe_Arrow right">
+                        <i class="bi bi-arrow-right-circle-fill "></i>
+                    </span>
                 </div>
             </section>
 

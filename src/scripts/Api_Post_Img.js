@@ -4,12 +4,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('Form_Photo');
   const uploadInput = document.getElementById('Upload_Photo');
   const sendBtn = document.getElementById('Send_Photo');
-  const loadingEl = document.getElementById('loading'); // pega o elemento do loading
+  const loadingEl = document.getElementById('loading'); 
+  const label = document.querySelector('label[for="Upload_Photo"]'); 
 
-  if (!form || !uploadInput || !sendBtn) {
-    console.warn('Elemento Form_Photo, Upload_Photo ou Send_Photo não encontrado.');
+  if (!form || !uploadInput || !sendBtn || !label) {
+    console.warn('Elemento Form_Photo, Upload_Photo, Send_Photo ou label não encontrado.');
     return;
   }
+
+  uploadInput.addEventListener('change', () => {
+    const file = uploadInput.files[0];
+    if (file) {
+      label.textContent = file.name.length > 30 
+        ? file.name.slice(0, 27) + '...'
+        : file.name;
+    }
+  });
 
   sendBtn.addEventListener('click', async () => {
     const file = uploadInput.files[0];
@@ -48,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
       console.error('Erro ao enviar imagem:', error);
       alert('Erro ao gerar receitas. Veja o console.');
     } finally {
-      // Esconde o loading (apenas se você continuar na página atual, mas em redirect não faz efeito)
+      // Esconde o loading
       if (loadingEl) loadingEl.style.display = 'none';
     }
   });
