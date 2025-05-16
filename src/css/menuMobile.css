@@ -30,9 +30,8 @@
 }
 
 .menu__text {
-    font-family: Montserrat;
-    font-size: 1rem;
-    font-weight: 500;
+    font: var(--p-font-mobile);
+    font-weight: 600;
 
 }
 

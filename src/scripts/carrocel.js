@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const texts = document.querySelectorAll('.carousel-texts p');
+  const texts = document.querySelectorAll('.carousel-texts h2');
   const btnLeft = document.querySelector('.carousel-arrow.left');
   const btnRight = document.querySelector('.carousel-arrow.right');
   let current = 0;
 
   const showText = (index) => {
-    texts.forEach((p, i) => p.classList.toggle('active', i === index));
+    texts.forEach((h2, i) => h2.classList.toggle('active', i === index));
   };
 
   const next = () => {

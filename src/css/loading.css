@@ -23,6 +23,7 @@
 }
 
 .loading p{
+  font: var(--h2-font);
   color: var(--primary-color);
   font-size: 1.5rem;
   font-weight: 600;

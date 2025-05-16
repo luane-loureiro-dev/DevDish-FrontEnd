@@ -1,64 +1,63 @@
-.Main_Info{
-    background-color: var(--base-bg-color);
-    width: 100vw;
-    height: auto;
-    padding: 1rem;
-    justify-items: center;
-    align-self: center;
+.Main_Info {
+  background-color: var(--base-bg-color);
+  width: 100vw;
+  height: auto;
+  padding: 1rem;
+  justify-items: center;
+  align-self: center;
 }
 
-.Info_Card_Box{
-      width: 90%;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      gap: 2rem;
-      padding: 1rem 2.5rem;    
+.Info_Card_Box {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1rem 2.5rem;
 }
 
-.Info_Card{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width:35vw;
-    gap: 1rem;
+.Info_Card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 35vw;
+  gap: 1rem;
 }
 
-.Folow_Us_card{
-    align-items: center;
+.Folow_Us_card {
+  align-items: center;
 }
 
-.Info_Card_Icon_Title{
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
+.Info_Card_Icon_Title {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
 }
 
-.Main_Info h3{
-    font-size: 1.25rem;
-    font-weight: 600;
-    text-align: left;
-    color: var(--primary-text-color);
+.Main_Info h3 {
+  font: var(--h3-font);
+  text-align: left;
+  color: var(--primary-text-color);
 }
 
-.Info_Social_Media_Box{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    color: var(--icon-link-color);
-    padding: 2rem 0;
-    gap: 2rem;
+.Info_Social_Media_Box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: var(--icon-link-color);
+  padding: 2rem 0;
+  gap: 2rem;
 }
 
-.Info_Social_Media_Box a:hover{
-    color: var(--icon-color);
-    cursor: pointer;
-    transition: all 0.6s ease-in-out;
-    text-decoration: none;
+.Info_Social_Media_Box a:hover {
+  color: var(--icon-color);
+  cursor: pointer;
+  transition: all 0.6s ease-in-out;
+  text-decoration: none;
 }
 
-.Info_Card_News{
-    align-items: flex-end;
+.Info_Card_News {
+  align-items: flex-end;
 }

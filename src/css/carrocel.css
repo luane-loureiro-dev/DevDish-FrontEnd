@@ -3,14 +3,15 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 10rem;
+    height: 12vh;
     overflow: hidden;
     display: flex;
     align-items: left;
     padding: .5rem 0;
   }
 
-  .carousel-texts p{
+  .carousel-texts h2{
+    font: var(--h2-font);
     position: absolute;
     width: 100%;
     opacity: 0;
@@ -18,7 +19,7 @@
     text-align: left;
   }
 
-  .carousel-texts p.active {
+  .carousel-texts h2.active {
     opacity: 1;
   }
 

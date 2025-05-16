@@ -29,8 +29,7 @@
 }
 
 .Primary_Text_Box h1 {
-  font-size: 2.5rem;
-  font-weight: 800;
+  font: var(--h1-font);
 }
 
 .Primary_Text_Box h1,
@@ -41,8 +40,7 @@
 }
 
 .Primary_Text_Box p {
-  font-size: 1.25rem;
-  font-weight: 400;
+  font:var(--p-font);
   margin: 0;
 }
 
@@ -62,7 +60,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 3.5rem;
+  margin-top: 0;
   box-shadow: 0px 5px 20px 11px rgba(0, 0, 0, 0.25);
 }
 
@@ -102,7 +100,6 @@
 
 .Primary_Image img {
   width: 35rem;
-  height: 35rem;
 }
 
 .Primary_Text_Box {
@@ -111,11 +108,11 @@
   }
 
 .Primary_Text_Box h1 {
-    font-size: 2rem;
+    font: var(--h1-font-mobile);
   }
 
-.Primary_Text_Box p {
-    font-size: 1.5rem;
+.Primary_Text_Box h2 {
+    font: var(--h2-font-mobile);
   }
 
 .Primary_Buttons_Container {
@@ -134,7 +131,39 @@
   }
 
 .Primary_Image img {
+    width: 35rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .Main_Primary {
+    flex-direction: column;
+    margin-top: 23vh;
+  }
+
+  .Main_Info,
+  .Main_Receita_Bg {
+    display: none;
+  }
+
+  .Main_Content_Box {
+    padding: 0 2rem;
+  }
+
+  .Main_Content_Box h1 {
+    font: var(--h1-font-mobile);
+  }
+
+  .Main_Content_Box h2 {
+    font: var(--h2-font-mobile);
+  }
+  .Primary_Image img {
     width: 25rem;
-    height: 25rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Main_Image img {
+    width: 70vw;
   }
 }

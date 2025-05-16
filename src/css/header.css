@@ -49,8 +49,8 @@ header nav {
     }
     
     .NavBar_Logo{
-        height: 6rem;
-        padding: 0 0 0 2rem;
+        height: 8rem;
+        padding-top: 0;
     }
     .NavBar_Theme{
         font-size: xx-large;
