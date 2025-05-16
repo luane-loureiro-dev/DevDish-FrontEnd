@@ -36,8 +36,14 @@ h2, h3, p {
   .Main_Receita_Bg {
     margin-top: 2rem;
   }
-  
 
+}
+
+@media screen and (max-width: 1200px){
+    .Main_Bg {
+    height: 80vh;
+    margin-top: 8rem;
+  }
 }
 
 @media screen and (max-width: 900px) {
