@@ -13,7 +13,6 @@
   .carousel-texts p{
     position: absolute;
     width: 100%;
-    padding-right: 2rem;
     opacity: 0;
     transition: opacity 3s ease-in-out;
     text-align: left;
@@ -26,7 +25,6 @@
   .carousel-buttons {
     display: flex;
     justify-content: space-around;
-    margin-top: 1rem;
   }
 
   .carousel-arrow {
@@ -42,7 +40,7 @@
   border-radius: 50%;
   font-size: 1rem;
   cursor: pointer;
-  margin-top: 6rem;
+  margin-top: 1rem;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s;
   z-index: 1;

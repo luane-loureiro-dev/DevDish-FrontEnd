@@ -9,15 +9,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let indexAtual = 0;
 
-  const tituloEl = document.querySelector('#titulo-receita');
-  const instrucoesEl = document.querySelector('#instrucoes-receita');
-  const tempoEl = document.querySelector('#tempo-preparo');
-  const listaIngredientesEl = document.querySelector('#lista-ingredientes');
-  const porcoesEl = document.querySelector('#numero-porcoes');
-  const imagemEl = document.querySelector('#imagem-receita');
-  const btnEsquerda = document.querySelector('.Next_Recipe_Arrow.left');
-  const btnDireita = document.querySelector('.Next_Recipe_Arrow.right');
-  const contadorEl = document.querySelector('#contador-receitas');
+  const tituloEl = document.querySelector('#Recipe_Title');
+  const instrucoesEl = document.querySelector('#Recipe_Instructions');
+  const tempoEl = document.querySelector('#Recipe_Preparation_Time');
+  const listaIngredientesEl = document.querySelector('#Ingredients_List');
+  const porcoesEl = document.querySelector('#Recipe_Portion');
+  const imagemEl = document.querySelector('#Recipe_Image');
+  const btnEsquerda = document.querySelector('.Recipe_Next_Arrow.left');
+  const btnDireita = document.querySelector('.Recipe_Next_Arrow.right');
+  const contadorEl = document.querySelector('#Recipe_Counter_Page');
 
   // Palavras-chave e imagens associadas
   const palavrasChave = {
@@ -27,11 +27,19 @@ document.addEventListener('DOMContentLoaded', () => {
     'panqueca': 'src/img/img_receita/panqueca.svg',
     'pao': 'src/img/img_receita/pao.svg',
     'sopa': 'src/img/img_receita/sopa.svg',
+    'ensopado': 'src/img/img_receita/sopa.svg',
     'pure': 'src/img/img_receita/pure.svg',
     'torta': 'src/img/img_receita/torta.svg',
     'suco': 'src/img/img_receita/suco.svg',
     'vitamina': 'src/img/img_receita/suco.svg',
-    'Smoothie': 'src/img/img_receita/suco.svg'
+    'Smoothie': 'src/img/img_receita/suco.svg',
+    'quiche': 'src/img/img_receita/quiche.svg',
+    'bolinho': 'src/img/img_receita/bolinho.svg',
+    'biscoito': 'src/img/img_receita/biscoito.svg',
+    'mousse': 'src/img/img_receita/musse.svg',	
+    'pudim': 'src/img/img_receita/pudim.svg',
+    'sorvete': 'src/img/img_receita/sorvete.svg',
+
   };
 
   // Função para remover acentos

@@ -32,5 +32,7 @@ button {
 @media screen and (max-width: 1200px) {
     button{
         width: 100%;
+        height: auto
     }   
 }
+

@@ -36,6 +36,12 @@ header nav {
     justify-content: center;
 }
 
+@media screen and (min-width: 1920px) {
+    header nav{
+        width: 100%;
+}
+
+}
 
 @media screen and (max-width: 900px) {
     header nav {
